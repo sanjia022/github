@@ -25,7 +25,10 @@ public class Autosuggestion1 {
 	    searchArea.sendKeys(Keys.ARROW_DOWN);
 	    searchArea.sendKeys(Keys.ARROW_DOWN);
 	    searchArea.sendKeys(Keys.ARROW_DOWN);
+	    searchArea.sendKeys(Keys.ARROW_DOWN);
+	    searchArea.sendKeys(Keys.ARROW_DOWN);
 	    searchArea.sendKeys(Keys.ENTER);
+	    
 	    
 	    TakesScreenshot t1 = (TakesScreenshot) driver;
 	    File source = t1.getScreenshotAs(OutputType.FILE);
