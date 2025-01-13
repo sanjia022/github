@@ -1,6 +1,7 @@
 package xpath;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -44,6 +45,24 @@ public class AbsoluteXpath2 {
 		driver.get("https://www.google.com/");
 		WebElement gmailLink = driver.findElement(By.linkText("Gmail"));
 		a1.contextClick(gmailLink).perform();
+		
+		WebElement searchArea = driver.findElement(By.className("gLFyf"));
+		searchArea.sendKeys("Bangladesh");
+		
+		List<WebElement> li = driver.findElements(By.xpath("//div[@class = 'OBMEnb']/ul/li"));
+		int count = li.size();
+		
+		System.out.println(count);
+		
+		li.get( count - 2).click();
+		
+		driver.get("https://www.flipkart.com/");
+		WebElement search = driver.findElement(By.name("q"));
+		search.sendKeys("shoe");
+		List<WebElement> li1= driver.findElements(By.xpath("//form[@class ='_2rslOn header-form-search OpXDaO']/ul/li"))	;
+		int count1 = li1.size();
+		
+		li1.get(count1 - 1).click();
 		
 	}
 
